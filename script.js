@@ -13,8 +13,24 @@ function getComputerChoice () {
 }
 
 function getHumanChoice() {
-    
+    // Return valid choice based on human selection
+
+    // Prompt user for choice #
+    let choice = prompt("Enter a number: \n1: Rock \n2: Paper \n3: Scissors");
+
+    // If user choice matches available options, return human choice as a string
+    if (Number(choice) === 1){
+        return "Rock";
+    } else if (Number(choice) === 2) {
+        return "Paper";
+    } else if (Number(choice) === 3) {
+        return "Scissors";
+    } else {
+        return "Not a valid selection....";
+    }
 }
 
 // Calling getComputerChoice function and assigning to cc variable
 let cc = getComputerChoice();
+
+console.log(getHumanChoice());
